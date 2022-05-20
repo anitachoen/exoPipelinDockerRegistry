@@ -1,0 +1,8 @@
+stages:
+  - build
+
+docker_build:
+  stage: build
+  script:
+    - docker build -t exoPDR.com/exoPDR-image:latest .
+    - docker push exoPDR.com/exoPDR-image:latest
